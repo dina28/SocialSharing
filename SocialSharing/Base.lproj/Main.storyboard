@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="et6-nN-hd4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Social Sharing View Controller-->
+        <scene sceneID="pM4-z8-IIy">
+            <objects>
+                <viewController id="et6-nN-hd4" customClass="SocialSharingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IWc-pH-yLo"/>
+                        <viewControllerLayoutGuide type="bottom" id="pAW-ZN-nta"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I1b-Xu-CXG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text to share" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TWJ-I9-bvy">
+                                <rect key="frame" x="71" y="46" width="459" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="setImageButtonClick:" destination="et6-nN-hd4" eventType="editingDidEnd" id="FWW-3F-TSh"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="6AM-He-ock">
+                                <rect key="frame" x="104" y="136" width="393" height="231"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="0PS-e8-rc2"/>
+                                    <constraint firstAttribute="width" constant="393" id="g7X-ja-SJq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXz-pI-QLr">
+                                <rect key="frame" x="104" y="397" width="385" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="zgt-sx-m7F"/>
+                                </constraints>
+                                <state key="normal" title="Facebook"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLV-SF-E45">
+                                <rect key="frame" x="104" y="90" width="393" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="pkI-bL-lR0"/>
+                                </constraints>
+                                <state key="normal" title="Set Image To Share"/>
+                                <connections>
+                                    <action selector="setImageButtonClick:" destination="et6-nN-hd4" eventType="touchUpInside" id="wxw-xk-cQH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aad-s6-SAt">
+                                <rect key="frame" x="118" y="453" width="352" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="352" id="Idy-3E-DLW"/>
+                                </constraints>
+                                <state key="normal" title="Twitter"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bLV-SF-E45" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="84" id="2Ys-os-cpF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aad-s6-SAt" secondAttribute="trailing" constant="110" id="5JX-Xb-L7H"/>
+                            <constraint firstItem="rXz-pI-QLr" firstAttribute="top" secondItem="6AM-He-ock" secondAttribute="bottom" constant="30" id="BYQ-aT-0v9"/>
+                            <constraint firstItem="TWJ-I9-bvy" firstAttribute="top" secondItem="IWc-pH-yLo" secondAttribute="bottom" constant="26" id="D0j-5Y-iae"/>
+                            <constraint firstItem="6AM-He-ock" firstAttribute="top" secondItem="bLV-SF-E45" secondAttribute="bottom" constant="16" id="Dn5-tj-znq"/>
+                            <constraint firstItem="6AM-He-ock" firstAttribute="top" secondItem="IWc-pH-yLo" secondAttribute="bottom" constant="116" id="DwU-cZ-SN4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TWJ-I9-bvy" secondAttribute="trailing" constant="50" id="GpW-Eh-kQX"/>
+                            <constraint firstItem="6AM-He-ock" firstAttribute="leading" secondItem="bLV-SF-E45" secondAttribute="leading" id="LsW-Xy-aqF"/>
+                            <constraint firstItem="rXz-pI-QLr" firstAttribute="leading" secondItem="6AM-He-ock" secondAttribute="leading" id="N7I-DV-4G1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bLV-SF-E45" secondAttribute="trailing" constant="83" id="Qfm-hm-R5p"/>
+                            <constraint firstItem="aad-s6-SAt" firstAttribute="top" secondItem="rXz-pI-QLr" secondAttribute="bottom" constant="20" id="VlV-QQ-0og"/>
+                            <constraint firstItem="6AM-He-ock" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="84" id="Ys5-md-VTM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6AM-He-ock" secondAttribute="trailing" constant="83" id="nOZ-EC-Qxq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rXz-pI-QLr" secondAttribute="trailing" constant="91" id="o1H-g9-KdO"/>
+                            <constraint firstItem="aad-s6-SAt" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="98" id="q6a-We-8VN"/>
+                            <constraint firstItem="TWJ-I9-bvy" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="51" id="zQe-j2-lo3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="6AM-He-ock" id="pD7-ug-exA"/>
+                        <outlet property="setImageButton" destination="bLV-SF-E45" id="AZa-ov-Mog"/>
+                        <outlet property="textField" destination="TWJ-I9-bvy" id="EEg-gH-lEY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzH-LP-GiH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="images" width="239" height="211"/>
+    </resources>
+</document>
