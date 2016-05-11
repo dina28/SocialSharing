@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface popUpViewController : UIViewController
+@interface popUpViewController:UIViewController
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (copy, nonatomic) void(^didSelectedRowTableAction)(NSInteger index);
 @property (copy, nonatomic) void(^closeAction)();
 

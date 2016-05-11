@@ -10,12 +10,10 @@
 #import "UIViewController+MJPopupViewController.h"
 #import "popUpViewController.h"
 
-@interface SocialSharingViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface SocialSharingViewController:UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *setImageButton;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
-
 
 @end
