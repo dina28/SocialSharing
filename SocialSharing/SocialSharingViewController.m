@@ -22,6 +22,13 @@
     [super viewDidLoad];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    if (![touch.view isMemberOfClass:[UITextField class]]) {
+        [touch.view endEditing:YES];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -44,10 +51,27 @@
 }
 
 - (void)chooseExisting {
+    pickerfromPhotoLibrary = [[UIImagePickerController alloc] init];
+    pickerfromPhotoLibrary.delegate = self;
+    [pickerfromPhotoLibrary setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    [self presentViewController:pickerfromPhotoLibrary animated:YES completion:NULL];
 }
 
 - (void)takePhoto {
-    pickerfromCamera = [[UIImagePickerController alloc] init]];
+    pickerfromCamera = [[UIImagePickerController alloc] init];
+    pickerfromCamera.delegate = self;
+    [pickerfromCamera setSourceType:UIImagePickerControllerSourceTypeCamera];
+    [self presentViewController:pickerfromCamera animated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self.imageView setImage:image];
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

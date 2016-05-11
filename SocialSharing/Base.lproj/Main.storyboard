@@ -18,64 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXz-pI-QLr">
+                                <rect key="frame" x="25" y="397" width="555" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aad-s6-SAt">
+                                <rect key="frame" x="25" y="447" width="555" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text to share" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TWJ-I9-bvy">
-                                <rect key="frame" x="71" y="46" width="459" height="30"/>
+                                <rect key="frame" x="20" y="46" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="setImageButtonClick:" destination="et6-nN-hd4" eventType="editingDidEnd" id="FWW-3F-TSh"/>
-                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="6AM-He-ock">
-                                <rect key="frame" x="104" y="136" width="393" height="231"/>
+                                <rect key="frame" x="25" y="136" width="555" height="231"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="231" id="0PS-e8-rc2"/>
-                                    <constraint firstAttribute="width" constant="393" id="g7X-ja-SJq"/>
+                                    <constraint firstAttribute="height" constant="231" id="unb-8B-YOg"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXz-pI-QLr">
-                                <rect key="frame" x="104" y="397" width="385" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="zgt-sx-m7F"/>
-                                </constraints>
-                                <state key="normal" title="Facebook"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLV-SF-E45">
-                                <rect key="frame" x="104" y="90" width="393" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="393" id="pkI-bL-lR0"/>
-                                </constraints>
-                                <state key="normal" title="Set Image To Share"/>
+                                <rect key="frame" x="25" y="90" width="555" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Set Image">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="setImageButtonClick:" destination="et6-nN-hd4" eventType="touchUpInside" id="wxw-xk-cQH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aad-s6-SAt">
-                                <rect key="frame" x="118" y="453" width="352" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="352" id="Idy-3E-DLW"/>
-                                </constraints>
-                                <state key="normal" title="Twitter"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bLV-SF-E45" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="84" id="2Ys-os-cpF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aad-s6-SAt" secondAttribute="trailing" constant="110" id="5JX-Xb-L7H"/>
-                            <constraint firstItem="rXz-pI-QLr" firstAttribute="top" secondItem="6AM-He-ock" secondAttribute="bottom" constant="30" id="BYQ-aT-0v9"/>
-                            <constraint firstItem="TWJ-I9-bvy" firstAttribute="top" secondItem="IWc-pH-yLo" secondAttribute="bottom" constant="26" id="D0j-5Y-iae"/>
-                            <constraint firstItem="6AM-He-ock" firstAttribute="top" secondItem="bLV-SF-E45" secondAttribute="bottom" constant="16" id="Dn5-tj-znq"/>
-                            <constraint firstItem="6AM-He-ock" firstAttribute="top" secondItem="IWc-pH-yLo" secondAttribute="bottom" constant="116" id="DwU-cZ-SN4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TWJ-I9-bvy" secondAttribute="trailing" constant="50" id="GpW-Eh-kQX"/>
-                            <constraint firstItem="6AM-He-ock" firstAttribute="leading" secondItem="bLV-SF-E45" secondAttribute="leading" id="LsW-Xy-aqF"/>
-                            <constraint firstItem="rXz-pI-QLr" firstAttribute="leading" secondItem="6AM-He-ock" secondAttribute="leading" id="N7I-DV-4G1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bLV-SF-E45" secondAttribute="trailing" constant="83" id="Qfm-hm-R5p"/>
-                            <constraint firstItem="aad-s6-SAt" firstAttribute="top" secondItem="rXz-pI-QLr" secondAttribute="bottom" constant="20" id="VlV-QQ-0og"/>
-                            <constraint firstItem="6AM-He-ock" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="84" id="Ys5-md-VTM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6AM-He-ock" secondAttribute="trailing" constant="83" id="nOZ-EC-Qxq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rXz-pI-QLr" secondAttribute="trailing" constant="91" id="o1H-g9-KdO"/>
-                            <constraint firstItem="aad-s6-SAt" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="98" id="q6a-We-8VN"/>
-                            <constraint firstItem="TWJ-I9-bvy" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="51" id="zQe-j2-lo3"/>
+                            <constraint firstItem="rXz-pI-QLr" firstAttribute="top" secondItem="6AM-He-ock" secondAttribute="bottom" constant="30" id="1fb-yL-EeT"/>
+                            <constraint firstItem="6AM-He-ock" firstAttribute="top" secondItem="bLV-SF-E45" secondAttribute="bottom" constant="16" id="2yN-Ih-aHj"/>
+                            <constraint firstItem="aad-s6-SAt" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="5" id="6Yh-47-3eP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="TWJ-I9-bvy" secondAttribute="leading" id="AoI-Jc-Pi6"/>
+                            <constraint firstItem="aad-s6-SAt" firstAttribute="top" secondItem="rXz-pI-QLr" secondAttribute="bottom" constant="20" id="BtM-WC-BM2"/>
+                            <constraint firstItem="bLV-SF-E45" firstAttribute="top" secondItem="I1b-Xu-CXG" secondAttribute="top" constant="90" id="EZt-Wf-d4u"/>
+                            <constraint firstItem="rXz-pI-QLr" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="5" id="GcH-ts-Vab"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6AM-He-ock" secondAttribute="trailing" id="OcE-n4-tSt"/>
+                            <constraint firstItem="6AM-He-ock" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="5" id="Tyk-Qv-MW0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aad-s6-SAt" secondAttribute="trailing" id="Z9p-Ka-2Jb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TWJ-I9-bvy" secondAttribute="trailing" id="lJw-Qr-iSU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rXz-pI-QLr" secondAttribute="trailing" id="lWa-Vx-2xC"/>
+                            <constraint firstItem="bLV-SF-E45" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="5" id="mDb-xK-Gpd"/>
+                            <constraint firstItem="bLV-SF-E45" firstAttribute="top" secondItem="TWJ-I9-bvy" secondAttribute="bottom" constant="14" id="wSx-2h-0vp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bLV-SF-E45" secondAttribute="trailing" id="yQ2-d1-XDI"/>
                         </constraints>
                     </view>
                     <connections>
