@@ -8,11 +8,7 @@
 
 #import "SocialSharingViewController.h"
 
-@interface SocialSharingViewController () {
-    UIImagePickerController *pickerfromPhotoLibrary;
-    UIImagePickerController *pickerfromCamera;
-    UIImage *image;
-}
+@interface SocialSharingViewController ()
 
 @end
 
@@ -51,27 +47,56 @@
 }
 
 - (void)chooseExisting {
-    pickerfromPhotoLibrary = [[UIImagePickerController alloc] init];
+    UIImagePickerController *pickerfromPhotoLibrary = [[UIImagePickerController alloc] init];
     pickerfromPhotoLibrary.delegate = self;
     [pickerfromPhotoLibrary setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-    [self presentViewController:pickerfromPhotoLibrary animated:YES completion:NULL];
+    [self presentViewController:pickerfromPhotoLibrary animated:YES completion:nil];
 }
 
 - (void)takePhoto {
-    pickerfromCamera = [[UIImagePickerController alloc] init];
+    UIImagePickerController *pickerfromCamera = [[UIImagePickerController alloc] init];
     pickerfromCamera.delegate = self;
     [pickerfromCamera setSourceType:UIImagePickerControllerSourceTypeCamera];
-    [self presentViewController:pickerfromCamera animated:YES completion:NULL];
+    [self presentViewController:pickerfromCamera animated:YES completion:nil];
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    image = [info objectForKey:UIImagePickerControllerOriginalImage];
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> *)info {
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self.imageView setImage:image];
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)facebookButtonClick:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *fbSLComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [fbSLComposeViewController addImage:self.imageView.image];
+        [fbSLComposeViewController setInitialText:self.textField.text];
+        [self presentViewController:fbSLComposeViewController animated:YES completion:nil];
+    } else {
+        [self loadMessageWithTitle:@"Facebook Unavailable" message:@"Sorry, we're unable to find a Facebook account on your device.\nPlease setup an account in your devices settings and try again."];
+    }
+}
+
+- (IBAction)twitterButtonClick:(id)sender {
+   if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        SLComposeViewController *twitterSLComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [twitterSLComposeViewController addImage:self.imageView.image];
+        [twitterSLComposeViewController setInitialText:self.textField.text];
+        [self presentViewController:twitterSLComposeViewController animated:YES completion:nil];
+    } else {
+        [self loadMessageWithTitle:@"Twitter Unavailable" message:@"Sorry, we're unable to find a Twitter account on your device.\nPlease setup an account in your devices settings and try again."];
+    }
+}
+
+- (void)loadMessageWithTitle:(NSString *)title  message:(NSString *)message {
+    UIAlertController *messageController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [messageController addAction:ok];
+    [self presentViewController:messageController animated:YES completion:nil];
 }
 
 @end

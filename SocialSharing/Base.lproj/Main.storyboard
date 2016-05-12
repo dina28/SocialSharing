@@ -24,6 +24,9 @@
                                 <state key="normal" title="Facebook">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookButtonClick:" destination="et6-nN-hd4" eventType="touchUpInside" id="YI4-va-up0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aad-s6-SAt">
                                 <rect key="frame" x="25" y="447" width="555" height="30"/>
@@ -31,6 +34,9 @@
                                 <state key="normal" title="Twitter">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="twitterButtonClick:" destination="et6-nN-hd4" eventType="touchUpInside" id="7Fl-eu-JUL"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text to share" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TWJ-I9-bvy">
                                 <rect key="frame" x="20" y="46" width="560" height="30"/>
@@ -54,10 +60,18 @@
                                     <action selector="setImageButtonClick:" destination="et6-nN-hd4" eventType="touchUpInside" id="wxw-xk-cQH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Social Sharing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsK-OS-Dah">
+                                <rect key="frame" x="15" y="17" width="570" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.73913405669999999" green="0.13315780420000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rXz-pI-QLr" firstAttribute="top" secondItem="6AM-He-ock" secondAttribute="bottom" constant="30" id="1fb-yL-EeT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SsK-OS-Dah" secondAttribute="trailing" constant="-5" id="1gX-Vk-tWT"/>
                             <constraint firstItem="6AM-He-ock" firstAttribute="top" secondItem="bLV-SF-E45" secondAttribute="bottom" constant="16" id="2yN-Ih-aHj"/>
                             <constraint firstItem="aad-s6-SAt" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="5" id="6Yh-47-3eP"/>
                             <constraint firstAttribute="leadingMargin" secondItem="TWJ-I9-bvy" secondAttribute="leading" id="AoI-Jc-Pi6"/>
@@ -66,7 +80,10 @@
                             <constraint firstItem="rXz-pI-QLr" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="5" id="GcH-ts-Vab"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6AM-He-ock" secondAttribute="trailing" id="OcE-n4-tSt"/>
                             <constraint firstItem="6AM-He-ock" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="5" id="Tyk-Qv-MW0"/>
+                            <constraint firstItem="TWJ-I9-bvy" firstAttribute="top" secondItem="SsK-OS-Dah" secondAttribute="bottom" constant="8" symbolic="YES" id="V0V-7V-n68"/>
+                            <constraint firstItem="SsK-OS-Dah" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="-5" id="XtF-gl-McK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aad-s6-SAt" secondAttribute="trailing" id="Z9p-Ka-2Jb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SsK-OS-Dah" secondAttribute="trailing" constant="-5" id="hP7-oD-Uo4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TWJ-I9-bvy" secondAttribute="trailing" id="lJw-Qr-iSU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rXz-pI-QLr" secondAttribute="trailing" id="lWa-Vx-2xC"/>
                             <constraint firstItem="bLV-SF-E45" firstAttribute="leading" secondItem="I1b-Xu-CXG" secondAttribute="leadingMargin" constant="5" id="mDb-xK-Gpd"/>
