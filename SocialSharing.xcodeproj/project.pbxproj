@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3615993A1CE4254D0057A650 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361599391CE4254D0057A650 /* Social.framework */; };
 		3631E1491CE190D40005F2B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3631E1481CE190D40005F2B9 /* main.m */; };
 		3631E14C1CE190D40005F2B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3631E14B1CE190D40005F2B9 /* AppDelegate.m */; };
 		3631E14F1CE190D40005F2B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3631E14E1CE190D40005F2B9 /* ViewController.m */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		361599391CE4254D0057A650 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3631E1441CE190D30005F2B9 /* SocialSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3631E1481CE190D40005F2B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3631E14A1CE190D40005F2B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3615993A1CE4254D0057A650 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +98,7 @@
 		3631E13B1CE190D30005F2B9 = {
 			isa = PBXGroup;
 			children = (
+				361599391CE4254D0057A650 /* Social.framework */,
 				3631E1461CE190D40005F2B9 /* SocialSharing */,
 				3631E1601CE190D40005F2B9 /* SocialSharingTests */,
 				3631E16B1CE190D40005F2B9 /* SocialSharingUITests */,
@@ -463,6 +467,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SocialSharing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fgfh.SocialSharing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -477,6 +482,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SocialSharing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fgfh.SocialSharing;
 				PRODUCT_NAME = "$(TARGET_NAME)";

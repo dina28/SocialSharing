@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "UIViewController+MJPopupViewController.h"
 #import "popUpViewController.h"
+#import <Social/Social.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface SocialSharingViewController:UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
