@@ -19,8 +19,8 @@
 		3631E1801CE19E5D0005F2B9 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3631E17D1CE19E5D0005F2B9 /* MJPopupBackgroundView.m */; };
 		3631E1811CE19E5D0005F2B9 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3631E17F1CE19E5D0005F2B9 /* UIViewController+MJPopupViewController.m */; };
 		3631E1851CE19F450005F2B9 /* SocialSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3631E1841CE19F450005F2B9 /* SocialSharingViewController.m */; };
-		3631E1891CE1A0970005F2B9 /* popUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3631E1871CE1A0970005F2B9 /* popUpViewController.m */; };
-		3631E18A1CE1A0970005F2B9 /* popUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3631E1881CE1A0970005F2B9 /* popUpViewController.xib */; };
+		36F22A6D1CE5E34A00678A10 /* PopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F22A6B1CE5E34A00678A10 /* PopUpViewController.m */; };
+		36F22A6E1CE5E34A00678A10 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F22A6C1CE5E34A00678A10 /* PopUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +64,9 @@
 		3631E17F1CE19E5D0005F2B9 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		3631E1831CE19F450005F2B9 /* SocialSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialSharingViewController.h; sourceTree = "<group>"; };
 		3631E1841CE19F450005F2B9 /* SocialSharingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialSharingViewController.m; sourceTree = "<group>"; };
-		3631E1861CE1A0970005F2B9 /* popUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popUpViewController.h; sourceTree = "<group>"; };
-		3631E1871CE1A0970005F2B9 /* popUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popUpViewController.m; sourceTree = "<group>"; };
-		3631E1881CE1A0970005F2B9 /* popUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = popUpViewController.xib; sourceTree = "<group>"; };
+		36F22A6A1CE5E34A00678A10 /* PopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpViewController.h; sourceTree = "<group>"; };
+		36F22A6B1CE5E34A00678A10 /* PopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpViewController.m; sourceTree = "<group>"; };
+		36F22A6C1CE5E34A00678A10 /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +174,11 @@
 		3631E1821CE19F000005F2B9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				36F22A6A1CE5E34A00678A10 /* PopUpViewController.h */,
+				36F22A6B1CE5E34A00678A10 /* PopUpViewController.m */,
+				36F22A6C1CE5E34A00678A10 /* PopUpViewController.xib */,
 				3631E1831CE19F450005F2B9 /* SocialSharingViewController.h */,
 				3631E1841CE19F450005F2B9 /* SocialSharingViewController.m */,
-				3631E1861CE1A0970005F2B9 /* popUpViewController.h */,
-				3631E1871CE1A0970005F2B9 /* popUpViewController.m */,
-				3631E1881CE1A0970005F2B9 /* popUpViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 				3631E1571CE190D40005F2B9 /* LaunchScreen.storyboard in Resources */,
 				3631E1541CE190D40005F2B9 /* Assets.xcassets in Resources */,
 				3631E1521CE190D40005F2B9 /* Main.storyboard in Resources */,
-				3631E18A1CE1A0970005F2B9 /* popUpViewController.xib in Resources */,
+				36F22A6E1CE5E34A00678A10 /* PopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,8 +319,8 @@
 			files = (
 				3631E1801CE19E5D0005F2B9 /* MJPopupBackgroundView.m in Sources */,
 				3631E1811CE19E5D0005F2B9 /* UIViewController+MJPopupViewController.m in Sources */,
-				3631E1891CE1A0970005F2B9 /* popUpViewController.m in Sources */,
 				3631E1851CE19F450005F2B9 /* SocialSharingViewController.m in Sources */,
+				36F22A6D1CE5E34A00678A10 /* PopUpViewController.m in Sources */,
 				3631E14F1CE190D40005F2B9 /* ViewController.m in Sources */,
 				3631E14C1CE190D40005F2B9 /* AppDelegate.m in Sources */,
 				3631E1491CE190D40005F2B9 /* main.m in Sources */,
