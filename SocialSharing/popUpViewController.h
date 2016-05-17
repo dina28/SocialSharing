@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#define kOption       @"Option"
+#define kClose        @"Close"
+#define kPhotoLibrary @"Photo Library"
+#define kTakePhoto    @"Take Photo"
+#define kCell         @"Cell"
 
-@interface popUpViewController:UIViewController
+@interface PopUpViewController:UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (copy, nonatomic) void(^didSelectedRowTableAction)(NSInteger index);
